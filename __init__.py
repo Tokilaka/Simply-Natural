@@ -1,0 +1,2 @@
+from extensions import app
+from routes import home, login, register, logout, store, page, inject_products, category, search, view_product, cart, remove_cart_item, add_product, add_category, delete_product, delete_category, edit_product, admin_panel

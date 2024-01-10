@@ -1,0 +1,41 @@
+{% extends "index.html" %} {% block title %} {{product.name}} {% endblock %}
+<!--  -->
+{% block content %}
+<div class="content view-product-main">
+	<div class="content-box">
+		<div class="product-box">
+			<img src="/static/img/products/{{product.img}}" alt="" />
+			<div class="product-info">
+				<h1>{{product.name}}</h1>
+				{% if product.discount %}
+				<div class="v-product-price">
+					<h3 class="old-price">${{product.price}}</h3>
+					<h3>${{product.discount_price}}</h3>
+				</div>
+				{% else %}
+				<h3>${{product.price}}</h3>
+				{% endif %}
+				<p>{{product.description}}</p>
+				<form action="" method="post">
+					{{form.hidden_tag()}}
+					<!--  -->
+					{{form.quantity(value=1, min=1, max=99)}}
+					<!--  -->
+					{{form.submit(value=form.submit.label.text)}}
+				</form>
+				<hr width="100%" />
+				<p class="category">
+					Category :
+					<span>{{category}}</span>
+				</p>
+				{% if current_user.is_authenticated and current_user.role == "admin"%}
+				<div class="admin-btns">
+					<a href="/edit_product/{{product.id}}">Edit</a>
+					<a href="/delete_product/{{product.id}}">Delete</a>
+				</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "index.html" %}
+<!--  -->
+{% block title %} Add Product {% endblock %}
+<!--  -->
+{% block content %}
+<div class="content">
+	<div class="content-box">
+		<h1>Add Product</h1>
+		<form class="add-product-box" enctype="multipart/form-data" method="post">
+			{{form.hidden_tag()}}
+			<div class="product-main">
+				{{form.name(placeholder=form.name.label.text)}}
+				<!--  -->
+				{{form.price(placeholder=form.price.label.text)}}
+			</div>
+			<div class="discount-box">
+				<div>{{form.discount.label()}} {{form.discount()}}</div>
+				<!--  -->
+				{{form.discount_price(placeholder=form.discount.label.text, value=0)}}
+			</div>
+			{{form.description(placeholder=form.description.label.text, class="description")}}
+			<!--  -->
+			{{form.img(placeholder=form.img.label.text, class="img")}}
+			<!--  -->
+			<div class="categories">{{ form.category_id.label }} {{ form.category_id }}</div>
+			<!--  -->
+			{{form.submit(placeholder=form.submit.label.text, class="submit")}}
+		</form>
+	</div>
+</div>
+{% endblock %}

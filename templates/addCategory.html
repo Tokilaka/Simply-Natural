@@ -1,0 +1,28 @@
+{% extends "index.html" %} {% block title %} Add Category {% endblock %}
+<!--  -->
+{% block content %}
+<div class="content">
+	<div class="content-box">
+		<h1>Add Category</h1>
+		<form class="add-product-box" action="" method="post">
+			{{category.hidden_tag()}}
+			<!--  -->
+			{{category.name(placeholder=category.name.label.text, class="category-input")}}
+			<!--  -->
+			{{category.submit(placeholder=category.submit.label.text, class="category-submit")}}
+		</form>
+	</div>
+</div>
+<div class="content">
+	<div class="content-box">
+		<h1>remove category</h1>
+		<ul>
+			{% for category in categories %}
+			<li style="list-style: none">
+				<a style="color: black; text-decoration: none" href="/delete_category/{{category.id}}">{{category.name}}</a>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
+{% endblock %}

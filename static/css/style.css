@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+:root {
+	--main-text-color: #2b2f38;
+	--secondary-text-color: #5d6167;
+	--main-red: #fc5f5f;
+	--main-green: #75c32c;
+}
+
+*::selection {
+	background-color: var(--main-red);
+	color: var(--main-text-color);
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: "Roboto", sans-serif;
+}
+
+.content {
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.background-1 {
+	background-image: url(/static/img/logo/hero-bg.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 100px 0;
+	border-bottom-left-radius: 75px;
+	border-bottom-right-radius: 75px;
+}
+
+.content-box {
+	width: 80%;
+}
+
+.content-box-1 {
+	width: 50%;
+}
+
+.content-box-1 h5 {
+	font-size: 18px;
+	color: var(--main-text-color);
+	font-weight: 500;
+	margin: 30px 0;
+}
+.content-box-1 h1 {
+	font-size: 75px;
+	font-weight: 400;
+	color: var(--main-text-color);
+	margin: 30px 0;
+}
+
+.content-box-1 a {
+	color: white;
+	text-decoration: none;
+	padding: 15px 30px;
+	border-radius: 100px;
+	font-weight: 600;
+	font-size: 14px;
+	letter-spacing: 2px;
+	background-color: var(--main-red);
+	transition: all 0.4s;
+}
+
+.content-box-1 a:hover {
+	background-color: var(--main-green);
+}
+
+.mini-cards-box {
+	padding: 50px 0;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.mini-card {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 30px 10px;
+}
+
+.mini-card .text-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	margin-left: 20px;
+}
+.mini-card .text-box h5 {
+	margin: 5px;
+	color: var(--main-text-color);
+	font-size: 18px;
+	font-weight: 500;
+}
+.mini-card .text-box p {
+	margin: 5px;
+	color: var(--secondary-text-color);
+}
+
+.collection-cards-box {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-bottom: 200px;
+}
+.collection-card {
+	width: 30%;
+	background-color: #efeef4;
+	padding: 50px 30px;
+	border-radius: 20px;
+	transition: all 0.2s;
+}
+
+.collection-card:hover {
+	box-shadow: 1px 20px 70px 5px rgb(241, 241, 241);
+}
+
+.collection-card img {
+	width: 100%;
+}
+
+.collection-card h3 {
+	font-weight: 500;
+	font-size: 20px;
+	color: var(--main-text-color);
+}
+
+.collection-card p {
+	font-weight: 400;
+	font-size: 16px;
+	color: var(--secondary-text-color);
+	line-height: 1.6;
+}
+
+.collection-card a {
+	text-decoration: none;
+	color: var(--main-red);
+	font-weight: 600;
+	letter-spacing: 2px;
+	font-size: 12px;
+	transition: all 0.4s;
+}
+
+.collection-card a:hover {
+	color: var(--main-text-color);
+}
+
+.background-2 {
+	background-image: url(/static/img/logo/CTA-bg.jpg);
+	background-position: bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 50px 0 400px 0;
+}
+
+.interested-section {
+	text-align: center;
+}
+
+.interested-section h2 {
+	color: var(--main-text-color);
+	font-size: 40px;
+	font-weight: 500;
+}
+
+.interested-section p {
+	color: var(--secondary-text-color);
+	line-height: 2;
+	margin: 20px 0 50px 0;
+}
+
+.interested-section a {
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	background-color: var(--main-red);
+	color: #fff;
+	padding: 15px 30px;
+	border-radius: 50px;
+	text-decoration: none;
+	transition: all 0.3s;
+}
+
+.interested-section a:hover {
+	background-color: var(--main-green);
+}

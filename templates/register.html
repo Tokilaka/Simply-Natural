@@ -1,0 +1,41 @@
+{% extends "index.html" %} {% block title %} Register {% endblock %}
+<!--  -->
+{% block content %}
+
+<div class="content login">
+	<div class="content-box">
+		<div class="login-box">
+			{% if messages %}
+			<ul class="flashes">
+				{% for message in messages %}
+				<li>{{ message }}</li>
+				{% endfor %}
+			</ul>
+			{% endif %}
+			<h1>Register</h1>
+			<form method="post">
+				<!--  -->
+				{{form.hidden_tag()}}
+				<!--  -->
+				<span>{{form.username.label}} *</span>
+				{{form.username()}}
+				<!--  -->
+				<span>{{form.email.label}} *</span>
+				{{form.email()}}
+				<!--  -->
+				<span>{{form.password.label}} *</span>
+				{{form.password()}}
+				<!--  -->
+				<span>{{form.confirm.label}} *</span>
+				{{form.confirm()}}
+				<!--  -->
+				{{form.submit(placeholder=form.submit.label.text)}}
+
+				<div class="links">
+					<a href="/login">Login</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+{% endblock %}

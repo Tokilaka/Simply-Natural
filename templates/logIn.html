@@ -1,0 +1,29 @@
+{% extends "index.html" %} {% block title %} Log In{% endblock %}
+<!--  -->
+{% block content %}
+<div class="content login">
+	<div class="content-box">
+		<div class="login-box">
+			<h1>Login</h1>
+			<form method="post">
+				<!--  -->
+				{{form.hidden_tag()}}
+				<!--  -->
+
+				<span>{{form.email.label}} *</span>
+				{{form.email()}}
+				<!--  -->
+				<span>{{form.password.label}} *</span>
+				{{form.password()}}
+				<!--  -->
+				{{form.submit(placeholder=form.submit.label.text)}}
+
+				<div class="links">
+					<a href="#">Forgot your password?</a>
+					<a href="/register">Sign up</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+{% endblock %}

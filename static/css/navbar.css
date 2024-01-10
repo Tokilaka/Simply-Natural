@@ -1,0 +1,83 @@
+:root {
+	--main-text-color: #2b2f38;
+	--main-text-hover-color: #fc5f5f;
+}
+
+.navbar {
+	padding: 15px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.navbar ul {
+	display: flex;
+}
+
+.navbar ul li {
+	list-style: none;
+}
+
+.navbar ul li a {
+	text-decoration: none;
+	color: var(--main-text-color);
+	font-size: 17px;
+	transition: all 0.4s;
+	padding: 30px 30px;
+	z-index: 10;
+}
+
+.navbar ul li a:hover {
+	color: var(--main-text-hover-color);
+}
+
+.navbar .logo {
+	display: flex;
+	align-items: center;
+}
+
+.navbar .logo a {
+	text-decoration: none;
+	color: var(--main-text-color);
+	font-size: 22px;
+	margin-left: 10px;
+}
+
+.active {
+	display: block !important;
+}
+
+#dropdown {
+	display: none;
+	z-index: 10;
+}
+
+.navbar .category {
+	padding: 5px;
+	margin-top: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	background-color: #ededed;
+	position: absolute;
+	z-index: 5;
+	width: 200px;
+	border-top: 3px solid var(--main-text-hover-color);
+}
+
+.navbar .category li {
+	margin: 10px 0;
+	width: 100%;
+}
+
+.navbar .category li a {
+	padding: 10px 65% 10px 0;
+	margin: 0;
+}
+
+#admin-panel-btn {
+	color: var(--main-text-hover-color);
+}
+#admin-panel-btn:hover {
+	color: blueviolet;
+}

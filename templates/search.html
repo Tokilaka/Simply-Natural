@@ -1,0 +1,33 @@
+{% extends "index.html" %} {% block title %} Search {% endblock %}
+<!--  -->
+{% block content %}
+<div class="content main-store">
+	<div class="content-box">
+		<div class="search-box">
+			<div class="search-box-2">
+				<input id="searchBox" type="text" placeholder="Search more.." name="" />
+				<button id="searchBtn">Search</button>
+			</div>
+		</div>
+		<div class="cards-container">
+			{% for product in products%}
+			<div class="product-card">
+				<a href="/store/view_product/{{product.id}}" style="background-image: url(/static/img/products/{{product.img}})" class="product-img"></a>
+				<p class="category">{{product.category.name}}</p>
+				<a href="/store/view_product/{{product.id}}" class="product-name">{{product.name}}</a>
+				<span class="product-price">
+					{% if product.discount %}
+					<p class="old-price">${{product.price}}</p>
+					<p>${{product.discount_price}}</p>
+					{% else %}
+					<p>${{product.price}}</p>
+					{% endif %}
+				</span>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+<script src="/static/js/search.js" defer></script>
+
+{% endblock %}

@@ -1,0 +1,72 @@
+{% extends "index.html" %} {% block title %} Cart {% endblock %}
+<!--  -->
+{% block content %}
+<div class="content cart">
+	<div class="content-box">
+		<div class="cart-box">
+			<h1>Cart</h1>
+			<table class="cart-content">
+				<thead>
+					<tr>
+						<td class="p-delete"></td>
+						<td class="p-img"></td>
+						<td class="p-name">Product</td>
+						<td class="p-price">Price</td>
+						<td class="p-quantity">Quantity</td>
+						<td class="p-total">Subtotal</td>
+					</tr>
+				</thead>
+				<tbody>
+					{% for item, product in items_in_cart %}
+					<tr>
+						<td class="p-delete">
+							<a href="/cart/remove_item/{{item.id}}">
+								<svg xmlns="http://www.w3.org/2000/svg" height="16" width="12" viewBox="0 0 384 512">
+									<path
+										fill="#5d6167"
+										d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z" />
+								</svg>
+							</a>
+						</td>
+						<td class="p-img"><img src="/static/img/products/{{product.img}}" alt="" /></td>
+						<td class="p-name"><a href="/store/view_product/{{product.id}}">{{product.name}}</a></td>
+						{% if product.discount %}
+						<td class="p-price">${{product.discount_price}}</td>
+						{% else %}
+						<td class="p-price">${{product.price}}</td>
+						{% endif %}
+						<td class="p-quantity">{{item.quantity}}</td>
+						{% if product.discount %}
+						<td class="p-total">${{item.quantity * product.discount_price}}</td>
+						{% else %}
+						<td class="p-total">${{item.quantity * product.price}}</td>
+						{% endif %}
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+		<div class="cart-box cart-total">
+			<table class="cart-content">
+				<thead>
+					<tr>
+						<td><h3 style="margin: 0; color: #2b2f38">Cart Totals</h3></td>
+						<td></td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Subtotal</td>
+						<td>${{total_price}}</td>
+					</tr>
+					<tr>
+						<td>Total</td>
+						<td>${{total_price}}</td>
+					</tr>
+				</tbody>
+			</table>
+			<a class="checkout" href="#">CHECKOUT</a>
+		</div>
+	</div>
+</div>
+{% endblock %}

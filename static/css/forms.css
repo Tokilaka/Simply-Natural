@@ -1,0 +1,254 @@
+:root {
+	--main-text-color: #2b2f38;
+	--secondary-text-color: #5d6167;
+	--main-red: #fc5f5f;
+	--main-green: #75c32c;
+	--main-background: #f9f9f9;
+}
+
+.login {
+	background-color: var(--main-background);
+}
+
+.flashes {
+	width: 100%;
+	background-color: var(--main-red);
+	padding: 20px 10px;
+	border: solid 1px red;
+}
+
+.flashes li {
+	list-style: none;
+}
+
+.login .content-box {
+	background-color: #fff;
+	padding: 80px 0;
+	margin: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.login-box {
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+.login-box h1 {
+	font-size: 45px;
+	font-weight: 500;
+	color: var(--main-text-color);
+}
+
+.login-box form {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 30px;
+	border: 1px solid #d3d3d3;
+	border-radius: 5px;
+}
+
+.login-box form .links {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.login-box form a {
+	text-decoration: none;
+	font-weight: 400;
+	color: var(--main-text-color);
+	transition: all 0.3s;
+}
+
+.login-box form a:hover {
+	color: var(--main-green);
+}
+
+.login-box form span {
+	color: var(--main-red);
+}
+
+.login-box form label {
+	color: var(--secondary-text-color);
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.login-box form input {
+	margin-bottom: 20px;
+	font-size: 22px;
+	padding: 10px 5px;
+	border: 1px solid #d3d3d3;
+}
+
+.login-box form input[type="submit"] {
+	border: none;
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	background-color: var(--main-red);
+	color: #fff;
+	cursor: pointer;
+	border-radius: 100px;
+	padding: 15px 20px;
+	width: 120px;
+	transition: all 0.2s;
+}
+
+.login-box form input[type="submit"]:hover {
+	background-color: var(--main-green);
+}
+
+.login-box form input:focus {
+	outline: none;
+	border: 1px dotted #d3d3d3;
+}
+
+.add-product-box {
+	padding: 50px 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.add-product-box input,
+textarea {
+	border: 1px solid #d3d3d3;
+}
+.add-product-box input:focus,
+textarea:focus {
+	outline: none;
+	border: 1px dotted #d3d3d3;
+}
+
+.product-main {
+	width: 80%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.product-main input {
+	width: 45%;
+	font-size: 20px;
+	padding: 10px;
+}
+
+.discount-box {
+	width: 80%;
+	display: flex;
+	align-items: center;
+	margin: 30px 0;
+	justify-content: space-between;
+}
+
+.discount-box div {
+	display: flex;
+	align-items: center;
+}
+
+.discount-box div label {
+	font-size: 30px;
+	font-weight: 300;
+}
+
+.discount-box div input {
+	width: 30px;
+	height: 30px;
+	margin-left: 20px;
+}
+
+.discount-box input[type="text"] {
+	width: 45%;
+	font-size: 20px;
+	padding: 10px;
+}
+
+.add-product-box .description {
+	width: 80%;
+	height: 100px;
+	margin: 20px 0;
+}
+
+.add-product-box .img {
+	margin: 20px;
+}
+
+.add-product-box .submit {
+	border: none;
+	font-size: 20px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	background-color: var(--main-red);
+	color: #fff;
+	cursor: pointer;
+	border-radius: 100px;
+	padding: 20px 50px;
+	transition: all 0.2s;
+}
+
+.add-product-box .submit:hover {
+	background-color: blueviolet;
+}
+
+.add-product-box .categories {
+	margin: 20px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 20px;
+}
+
+.add-product-box .categories select {
+	margin-left: 30px;
+	width: 150px;
+	height: 50px;
+	font-size: 22px;
+}
+
+.admin-panel {
+	padding: 50px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.admin-panel a {
+	text-decoration: none;
+	color: #fff;
+	padding: 15px 30px;
+	background-color: var(--main-red);
+	border-radius: 50px;
+	transition: all 0.3s;
+}
+.admin-panel a:hover {
+	background-color: blueviolet;
+}
+
+.category-input {
+	margin-bottom: 20px;
+	padding: 8px 12px;
+	font-size: 22px;
+}
+
+.category-submit {
+	font-size: 20px;
+	padding: 15px 40px;
+	background-color: var(--main-red);
+	cursor: pointer;
+	color: white;
+	border-radius: 50px;
+	border: none !important;
+	transition: all 0.2s;
+}
+
+.category-submit:hover {
+	background-color: blueviolet;
+}
