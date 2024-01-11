@@ -265,4 +265,4 @@ def admin_panel():
   if current_user.role != "admin":
     return redirect("/")
   
-  return render_template("adminPanel.html")
+  return render_template("adminpanel.html")
